@@ -1,18 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Bebas Neue", sans-serif;
+:root {
+  --body_background_light: black;
+  --body_color_light: white;
+  --body_background_dark:rgba(0, 0, 0, 0.8);
+  --body_color_dark: white;
+  --button_background_light: red;
+  --button_text_light: white;
+  --button_background_dark: black;
+  --button_text_dark: red;
 }
 
+[data-theme="dark"] {
+  --body_background: var(--body_background_dark);
+  --body_color: var(--body_color_dark);
+  --button_background: var(--button_background_dark);
+  --button_text: var(--button_text_dark);
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
+
+
 body {
-  background: black;
+  background: var(--body_background);
+  color: var(--body_color);
 }
 
 h1, h4, p, a {
-  color: red;
+  color: var(--body_color);
   text-decoration: none;
 }
 
@@ -20,13 +32,25 @@ ul {
   list-style-type: none;
 }
 
-.btn, .btn-light {
+.btn{
+   padding: 12px 32px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: red;
+  color: white;
+  border: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transform: skewX(-20deg);
+}
+.btn-light {
   padding: 12px 32px;
   font-size: 1rem;
   text-transform: uppercase;
-  background: red; 
-  color: white; 
-  border: 2px solid white;
+  background: var(--button_background_dark);
+  color: var(--button_text_light);
+  border: transparent;
   font-weight: 600;
   cursor: pointer;
   overflow: hidden;
@@ -35,15 +59,17 @@ ul {
 
 .btn-light {
   background: black;
-  color: red;
+  color: white;
 }
+
 .btn:hover {
   background: rgba(255, 255, 255, 0.2); 
-  color: red; 
+  color: var(--button_text); 
   transition: 0.3s;
 }
+
 .btn-light:hover {
   background: rgba(255, 255, 255, 0.2); 
-  color: black;
+  color: var(--button_text);
   transition: 0.3s; 
 }

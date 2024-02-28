@@ -3,11 +3,17 @@ import HeroVideoSrc from "../assets/herovideo.mp4";
 import "./HeroVideoStyles.css";
 import { Link } from 'react-router-dom';
 
-const HeroVideo = () => {
-  return (
+const HeroVideo = ({ darkMode }) => {
+  return (     
     <div className="hero">
-      <div className="mask">
-        <video className="hero-video" autoPlay loop muted disablePictureInPicture>
+      <div className={`mask ${darkMode ? 'dark-mode' : ''}`}>
+        <video
+          className={`hero-video ${darkMode ? 'dark-mode-video' : ''}`}
+          autoPlay
+          loop
+          muted
+          disablePictureInPicture
+        >
           <source src={HeroVideoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -21,8 +27,9 @@ const HeroVideo = () => {
         </div>
       </div>
     </div>
+    
   );
-}
+};
 
 export default HeroVideo;
 
