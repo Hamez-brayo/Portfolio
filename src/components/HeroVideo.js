@@ -3,6 +3,7 @@ import HeroVideoSrc from "../assets/herovideo.mp4";
 import "./HeroVideoStyles.css";
 import { Link } from 'react-router-dom';
 
+
 const HeroVideo = ({ darkMode }) => {
   return (     
     <div className="hero">
@@ -20,6 +21,7 @@ const HeroVideo = ({ darkMode }) => {
       </div>
       <div className="content">
         <p>The name's Brian; JAMES BRIAN😌</p>
+        <img src={require('../assets/images/dp3.png')} alt="Profile" className='home_img'></img>
         <h1>Coding my way through life!</h1>
         <div>
           <Link to="/about" className='btn'>ABOUT</Link>

@@ -60,6 +60,29 @@
     font-weight: 400;
     text-transform: uppercase;
   }
+  .home_img {
+    background: url(../assets/images/dp3.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    width: 300px !important;
+    height: 300px !important;
+    box-shadow: inset 0 0 0 9px rgb(red, green, blue/30%) !important;
+    order: 1 !important;
+    justify-self: center !important;
+    animation: profile_animate 8s ease-in-out infinite 1s !important;
+  }
+  @keyframes profile_animate{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
   
   .content .btn {
     margin: 1rem 0.8rem;

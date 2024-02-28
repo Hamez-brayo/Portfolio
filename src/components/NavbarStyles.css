@@ -10,6 +10,9 @@
     background-color: transparent;
     box-sizing: border-box;
   }
+  body[data-theme="dark"] .header {
+    background-color: black;
+  }
   
   .navbar-content {
     display: flex;

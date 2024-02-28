@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './NavbarStyles.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './DarkMode/DarkMode'
+import DarkMode from './DarkMode/DarkMode'
 
 const Navbar = ({ darkMode }) => {
   const [click, setClick] = useState(false);
@@ -26,7 +27,7 @@ const Navbar = ({ darkMode }) => {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <darkMode/>
+            <DarkMode/>
           </li>
         </ul>
       </div>
