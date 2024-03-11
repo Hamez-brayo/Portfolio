@@ -71,7 +71,7 @@ body.dark-mode .nav-menu a {
     background: rgba(255, 255, 255, 0.9); /* Dark background color */
     position: fixed;
     top: 0;
-    left: -104%;
+    left: -200%;
     z-index: -3;
     transition: left 0.3s;
   }
