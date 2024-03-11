@@ -1,0 +1,22 @@
+.heroimg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+  
+  .mask::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.1;
+  }
+  
+  .dark-mode .heroimg {
+    filter: invert(100%);
+  }

@@ -1,30 +1,48 @@
+/* Import external fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Global variables */
 :root {
-  --body_background_light: black;
-  --body_color_light: white;
-  --body_background_dark:rgba(0, 0, 0, 0.8);
-  --body_color_dark: white;
-  --button_background_light: red;
-  --button_text_light: white;
-  --button_background_dark: black;
-  --button_text_dark: red;
+  --body-background-light: rgba(255, 255, 255, 0.8);
+  --body-color-light: white;
+  --body-background-dark: rgba(0, 0, 0, 0.8);
+  --body-color-dark: white; /* Changed to white for dark mode */
+  --button-background-light: red;
+  --button-text-light: white;
+  --button-background-dark: red;
+  --button-text-dark: white;
 }
 
+/* Dark mode */
 [data-theme="dark"] {
-  --body_background: var(--body_background_dark);
-  --body_color: var(--body_color_dark);
-  --button_background: var(--button_background_dark);
-  --button_text: var(--button_text_dark);
+  --body-background: var(--body-background-dark);
+  --body-color: var(--body-color-dark);
+  --button-background: var(--button-background-dark);
+  --button-text: var(--button-text-dark);
 }
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
 
+/* Base styles */
+html, body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  height: 100%;
+}
 
 body {
-  background: var(--body_background);
-  color: var(--body_color);
+  background: var(--body-background);
+  color: var(--body-color);
+  font-family: 'Lato', sans-serif; /* Apply default font */
+  line-height: 1.5; /* Set default line height */
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  position: fixed;
+  top: 0;
+
 }
 
 h1, h4, p, a {
-  color: var(--body_color);
+  color: inherit; /* Inherit text color */
   text-decoration: none;
 }
 
@@ -32,44 +50,31 @@ ul {
   list-style-type: none;
 }
 
-.btn{
-   padding: 12px 32px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background: red;
-  color: white;
-  border: transparent;
-  font-weight: 600;
-  cursor: pointer;
-  overflow: hidden;
-  transform: skewX(-20deg);
-}
-.btn-light {
+/* Buttons */
+.btn, .btn-light {
   padding: 12px 32px;
   font-size: 1rem;
   text-transform: uppercase;
-  background: var(--button_background_dark);
-  color: var(--button_text_light);
-  border: transparent;
   font-weight: 600;
   cursor: pointer;
   overflow: hidden;
   transform: skewX(-20deg);
 }
 
-.btn-light {
-  background: black;
+.btn {
+  background: red;
   color: white;
+  border: transparent;
 }
 
-.btn:hover {
+.btn-light {
+  background: var(--button-background-dark);
+  color: var(--button-text-light); /* Changed to use light text color in dark mode */
+}
+
+/* Button hover effects */
+.btn:hover, .btn-light:hover {
   background: rgba(255, 255, 255, 0.2); 
-  color: var(--button_text); 
+  color: var(--button-text);
   transition: 0.3s;
-}
-
-.btn-light:hover {
-  background: rgba(255, 255, 255, 0.2); 
-  color: var(--button_text);
-  transition: 0.3s; 
 }

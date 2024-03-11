@@ -76,8 +76,12 @@ body[data-theme="dark"] .hero-video {
     filter: invert(100%);
   }
 @media screen and (max-width: 1040px){
-    .dark_mode{
-        display: none;
-    }
+    .dark_mode {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+      }
     
 }
