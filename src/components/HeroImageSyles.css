@@ -25,7 +25,7 @@ body[data-theme="dark"] .hero-img {
   font-size: 1.5rem;
   text-align: center;
 }
-@media screen and(max-width:640px) {
+@media screen and(max-width:1040px) {
   .hero-img h1{
     font-size: 2.3rem;
   }

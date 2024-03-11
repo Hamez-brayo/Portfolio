@@ -80,7 +80,7 @@
     margin: 1rem 0.8rem;
   }
   
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 1040px) {
     .hero .content h1 {
       font-size: 3rem;
     }

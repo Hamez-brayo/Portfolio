@@ -46,7 +46,7 @@ h4{
 p{
     font-size: 1.2rem;
 }
-@media screen and (max-width: 640px){
+@media screen and (max-width: 1040px){
     .footer-container{
         grid-template-columns: 1fr;
         

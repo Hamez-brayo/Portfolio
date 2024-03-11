@@ -37,11 +37,6 @@ body {
   width: 100%;
   padding: 0;
   top: 0;
-  width: calc(100vw - 17px); /* Adjust width to compensate for scrollbar */
-  overflow-y: scroll; /* Always show vertical scrollbar */
-
-
-
 }
 
 h1, h4, p, a {
