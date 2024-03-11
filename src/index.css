@@ -3,9 +3,9 @@
 
 /* Global variables */
 :root {
-  --body-background-light: rgba(255, 255, 255, 0.8);
+  --body-background-light: rgba(255, 255, 255);
   --body-color-light: white;
-  --body-background-dark: rgba(0, 0, 0, 0.8);
+  --body-background-dark: rgba(0, 0, 0);
   --body-color-dark: white; /* Changed to white for dark mode */
   --button-background-light: red;
   --button-text-light: white;
@@ -36,8 +36,11 @@ body {
   margin: 0;
   width: 100%;
   padding: 0;
-  position: fixed;
   top: 0;
+  width: calc(100vw - 17px); /* Adjust width to compensate for scrollbar */
+  overflow-y: scroll; /* Always show vertical scrollbar */
+
+
 
 }
 

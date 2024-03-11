@@ -2,15 +2,16 @@ import React from "react";
 import HeroVideo from "../components/HeroVideo"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer";
+import About from "./About";
+import Contact from "./Contact";
 
 
 const Home = () => {
     return (<div>
         <Navbar/>
-        <div>
-            <HeroVideo/>
-            
-        </div>   
+        <HeroVideo/>
+        <About/>
+        <Contact/>        
         <Footer/>
     </div>
     );

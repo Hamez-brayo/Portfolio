@@ -1,22 +1,36 @@
-.heroimg {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
-  }
+.hero-img {
+  width: 100%;
+  background: white;
+  height: 40vh;
+  position: relative;
   
-  .mask::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: black;
-    opacity: 0.1;
+}
+body[data-theme="dark"] .hero-img {
+  background-color: black;
+}
+
+/* Rest of your CSS */
+.heading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-img h1{
+  font-size: 2.5rem;
+}
+.hero-img p{
+  font-size: 1.5rem;
+  text-align: center;
+}
+@media screen and(max-width:640px) {
+  .hero-img h1{
+    font-size: 2.3rem;
   }
-  
-  .dark-mode .heroimg {
-    filter: invert(100%);
+  .hero-img p{
+    font-size: 1.4rem;
+    text-align: center;
   }
+}

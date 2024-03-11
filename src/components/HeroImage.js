@@ -1,19 +1,18 @@
-import React from 'react';
-import heroimg from "../assets/heroimage.jpg";
-import "./HeroImageSyles.css"
+import React, { Component } from 'react'; // Import Component from react
+import "./HeroImageSyles.css";
 
-const HeroImage = ({ darkMode }) => {
-  return (
-    <div className="hero-image">
-      <div className={`mask ${darkMode ? 'dark-mode' : ''}`}>
-        <img className="heroimg" src={heroimg} alt="heroimg" />
+class HeroImage extends Component {
+  render() {
+    const { darkMode } = this.props; // Destructure darkMode from props
+    return (
+      <div className={`hero-img ${darkMode ? 'dark-mode' : ''}`}>
         <div className="heading">
-          <h1>This is a Heading</h1>
-          <p>This is a paragraph</p>
+          <h1>{this.props.heading}</h1>
+          <p>{this.props.text}</p>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default HeroImage;
